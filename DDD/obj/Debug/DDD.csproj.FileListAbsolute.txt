@@ -1,0 +1,13 @@
+D:\DDD\DDD\bin\Debug\DDD.exe.config
+D:\DDD\DDD\bin\Debug\DDD.exe
+D:\DDD\DDD\bin\Debug\DDD.pdb
+D:\DDD\DDD\obj\Debug\DDD.csprojResolveAssemblyReference.cache
+D:\DDD\DDD\obj\Debug\DDD.Form1.resources
+D:\DDD\DDD\obj\Debug\DDD.Properties.Resources.resources
+D:\DDD\DDD\obj\Debug\DDD.csproj.GenerateResource.Cache
+D:\DDD\DDD\obj\Debug\DDD.exe
+D:\DDD\DDD\obj\Debug\DDD.pdb
+D:\DDD\DDD\obj\Debug\DDD.UCTreeList.resources
+D:\DDD\.git\DDD\bin\Debug\DDD.exe.config
+D:\DDD\.git\DDD\obj\Debug\DDD.exe
+D:\DDD\.git\DDD\obj\Debug\DDD.pdb
