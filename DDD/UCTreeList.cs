@@ -104,6 +104,7 @@ namespace DDD
             TreeNode node = new TreeNode(dir, 6, 6);
             node.Tag = dir;
 
+
             node.Nodes.Add("...");
             TreeViewFolder.Nodes.Add(node);
           
