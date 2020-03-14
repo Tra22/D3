@@ -38,7 +38,6 @@
             this.TreeViewFolder.Name = "TreeViewFolder";
             this.TreeViewFolder.Size = new System.Drawing.Size(725, 626);
             this.TreeViewFolder.TabIndex = 0;
-            this.TreeViewFolder.BeforeCollapse += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeViewFolder_BeforeCollapse);
             this.TreeViewFolder.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeViewFolder_BeforeExpand);
             this.TreeViewFolder.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewFolder_NodeMouseClick);
             // 

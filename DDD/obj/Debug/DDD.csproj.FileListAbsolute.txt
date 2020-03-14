@@ -1,7 +1,6 @@
 D:\DDD\DDD\bin\Debug\DDD.exe.config
 D:\DDD\DDD\bin\Debug\DDD.exe
 D:\DDD\DDD\bin\Debug\DDD.pdb
-D:\DDD\DDD\obj\Debug\DDD.csprojResolveAssemblyReference.cache
 D:\DDD\DDD\obj\Debug\DDD.Form1.resources
 D:\DDD\DDD\obj\Debug\DDD.Properties.Resources.resources
 D:\DDD\DDD\obj\Debug\DDD.csproj.GenerateResource.Cache

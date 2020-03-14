@@ -14,13 +14,16 @@ namespace DDD
     public partial class UCTreeList : UserControl
     {
         string space = " ";
+        string dir;
         ContextMenuStrip MyMenu = new System.Windows.Forms.ContextMenuStrip();
-        public UCTreeList()
+        public UCTreeList(string directory)
         {
             InitializeComponent();
-            
+            dir = directory;
             MyMenu.Items.Add("Copy");
             MyMenu.Items.Add("Refresh");
+
+            
         }
 
         private void TreeViewFolder_BeforeExpand(object sender, TreeViewCancelEventArgs e)
@@ -29,8 +32,6 @@ namespace DDD
             {
                 if (e.Node.Nodes[0].Text == "..." && e.Node.Nodes[0].Tag == null)
                 {
-                    MessageBox.Show(e.Node.Index.ToString());
-                    MessageBox.Show(e.Node.Text);
                     e.Node.Nodes.Clear();
 
                     //get the list of sub direcotires
@@ -56,7 +57,6 @@ namespace DDD
                             foreach (var file in di.GetFiles())
                             {
                                 FileInfo f = new FileInfo(dir + "\\" + file.Name);
-                                // MessageBox.Show(dir + "\\" + file.Name);
                                 TreeNode n = new TreeNode(file.Name + Spacing(f.Name.Length) + f.Length + " Bytes", 13, 13);
                                 node.Nodes.Add(n);
                             }
@@ -99,27 +99,25 @@ namespace DDD
         private void UCTreeList_Load(object sender, EventArgs e)
         {
             //get a list of the drives
-            string dir = @"\\fileserver1\IN6\KBNL-Books2018\Book11_Batch18\MMKB35_000000004_1_01";
+            //string dir = @"\\fileserver1\IN6\KBNL-Books2018\Book11_Batch18\MMKB35_000000004_1_01";
 
-                TreeNode node = new TreeNode(dir, 6, 6);
-                node.Tag = dir;
+            TreeNode node = new TreeNode(dir, 6, 6);
+            node.Tag = dir;
 
-                node.Nodes.Add("...");
-
-                TreeViewFolder.Nodes.Add(node);
+            node.Nodes.Add("...");
+            TreeViewFolder.Nodes.Add(node);
           
         }
 
         private void TreeViewFolder_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            
             if (e.Button == MouseButtons.Right)
             {
-               MyMenu.Show(Cursor.Position);
+                Point point = new Point(e.X,e.Y);
+                TreeViewFolder.SelectedNode=(TreeViewFolder.GetNodeAt(point));
+                MyMenu.Show(e.X,e.Y+50);
             }
-        }
-
-        private void TreeViewFolder_BeforeCollapse(object sender, TreeViewCancelEventArgs e)
-        {
         }
     }
 }
